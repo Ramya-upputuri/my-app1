@@ -1,0 +1,39 @@
+.parent{
+    height: 100vh;
+    width: 100vw;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+.right{
+    height: 100%;
+    width: 100%;
+    border: 1px solid rgb(201, 195, 195);
+    border-left: 0;
+    overflow: auto;
+    /* overflow-x: hidden; */
+
+}
+.row{
+    display: flex;
+    justify-content: space-evenly;
+}
+.right1{
+    height: 400px;
+    width: 250px ;
+    border: 1px solid rgb(201, 195, 195);
+    margin-top: 10px;
+}
+.right2{
+    height: 30px;
+    width: 80px;
+    background-color: rgba(207, 205, 205, 0.5);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 16px;
+    border-radius:3px ;
+    font-size: 13px;
+    font-weight:700;
+}
+

@@ -1,0 +1,26 @@
+<h1>Create Bike Form</h1>
+
+<form [formGroup]="bikeform">
+<label for="">Vehicles:</label>
+<input type="text" name="" id="" formControlName="Vehicle">
+<br>
+<label for="">Manufacturer:</label>
+<input type="text" formControlName="manufacturer">
+<br>
+<label for="">Model:</label>
+<input type="text" formControlName="model">
+<br>
+<label for="">Color:</label>
+<input type="text" formControlName="color">
+<br>
+<label for="">Type:</label>
+<input type="text" formControlName="type">
+<br>
+<label for="">Fuel:</label>
+<input type="text" formControlName="fuel">
+<br>
+<label for="">Image:</label>
+<input type="text" formControlName="image">
+<br>
+<button (click)="onsubmit()">Submit</button>
+</form>

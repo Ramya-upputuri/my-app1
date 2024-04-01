@@ -1,0 +1,11 @@
+.parent{
+    height: 50%;
+    width: 30%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    margin: auto;
+    margin-top: 15%;
+    border-radius: 10px;
+}

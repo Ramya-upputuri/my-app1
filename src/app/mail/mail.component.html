@@ -1,0 +1,4 @@
+<div *ngFor="let mail of maildata" class="parent" >
+    <p>{{mail.id}}</p>
+    <h6 [ngStyle]="{color:mail.completed==true? 'gray':'black'}">{{mail.title}}</h6>
+</div>

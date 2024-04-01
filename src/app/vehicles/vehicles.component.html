@@ -1,0 +1,64 @@
+<div class="parent">
+    <input type="text" (keydown)="vehicle()" [(ngModel)]="term" placeholder="search"><br><br>
+
+    <select name="" id="" (change)="manufacturer()" [(ngModel)]="data">
+        <option value="">Manufacturer</option>
+        <option value="{{vehicle.manufacturer}}" *ngFor="let vehicle of vehicles" >{{vehicle.manufacturer}}</option>
+    </select>
+
+    <select name="" id="" (change)="fuel()" [(ngModel)]="term1">
+        <option value="">Fuel</option>
+        <option value="{{vehicle.fuel}}" *ngFor="let vehicle of vehicles">{{vehicle.fuel}}</option>
+    </select>
+
+    <select name="" id="" (change)="color()" [(ngModel)]="term2">
+        <option value="">color</option>
+        <option value="{{vehicle.color}}" *ngFor="let vehicle of vehicles">{{vehicle.color}}</option>
+    </select>
+
+    <select name="" id="" (change)="type()" [(ngModel)]="term3">
+        <option value="">Type</option>
+        <option value="{{vehicle.type}}" *ngFor="let vehicle of vehicles">{{vehicle.type}}</option>
+    </select>
+
+    <button (click)="pricelowtohigh()" class="btn btn-success">Price low to high</button>
+    <button (click)="pricehightolow()" class="btn btn-success">Price high to low</button><br><br>
+
+    <label for="">From :</label>
+    <input type="number" [(ngModel)]="from">
+    <label for="">To :</label>
+    <input type="number" [(ngModel)]="to">
+    <button (click)="filter()" class="btn btn-success">Price range filter</button>
+
+    <table class="table table-bordered table-dark">
+        <thead>
+            <tr>
+                <th>Vehicle</th>
+                <th>Manufacturer</th>
+                <th>Model</th>
+                <th>Type</th>
+                <th>Fuel</th>
+                <th>Color</th>
+                <th>Image</th>
+                <th>Cost</th>
+                <th>id</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let vehicle of vehicles">
+                <td>{{vehicle.Vehicle}}</td>
+                <td>{{vehicle.manufacturer}}</td>
+                <td>{{vehicle.model}}</td>
+                <td>{{vehicle.type}}</td>
+                <td>{{vehicle.fuel}}</td>
+                <td>{{vehicle.color}}</td>
+                <td>
+                    <img src="{{vehicle.image}}" alt="" height="100px" width="100px">
+                </td>
+                <td>{{vehicle.cost}}</td>
+                <td>{{vehicle.id}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>

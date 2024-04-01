@@ -1,0 +1,46 @@
+<input type="text" [(ngModel)]="accname" (keypress)="filteredaccounts()">
+
+<select name="" id="" [(ngModel)]="pageNo" (change)="paggedaccounts()">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+</select>
+
+<select name="" id="" [(ngModel)]="column">
+    <option value="available_balance">available_balance</option>
+    <option value="account_number">account_number</option>
+</select>
+<select name="" id="" [(ngModel)]="order">
+    <option value="asc">Ascending</option>
+    <option value="desc">Descending</option>
+</select>
+<button (click)="sortedaccounts()">Sort</button>
+
+
+<table class="table table-bordered table-dark ">
+    <thead>
+        <tr>
+            <th>account_name</th>
+            <th>available_balance</th>
+            <th> city</th>
+            <th>account_number</th>
+            <th>profie_picture</th>
+            <th>id</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let Account of Accounts">
+            <td>{{Account.account_name}}</td>
+            <td>{{Account.available_balance}}</td>
+            <td>{{Account.city}}</td>
+            <td>{{Account.account_number}}</td>
+            <td>
+                <img src="{{Account.profie_picture}}" alt="" height="100px" width="100px">
+            </td>
+            <td>{{Account.id}}</td>
+            <td><button (click)="deletedaccounts(Account.id)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>

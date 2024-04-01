@@ -1,0 +1,38 @@
+<div class="parent">
+    <div class="header">
+        <select name="" id=""  (change)="data()" [(ngModel)]="term">
+            <option value="">Sort by : Recommended </option>
+            <option value="price low to high">price low to high</option>
+            <option value="price high to low">price high to low</option>
+        </select>
+    </div>
+    <div class="middile">
+            <div class="left">
+                <div class="left1">
+                    <h6>CATEGORY</h6>
+                    <div class="left2" *ngFor="let product of products ">
+                        <input type="checkbox">
+                        <label for="">{{product.category}}</label>
+                    </div>
+                </div>
+                <hr>
+                <div class="left3">
+                    <input type="checkbox">
+
+                </div>
+            </div>
+            <div class="right" >
+                <div class="row">
+                    <div class="right1 col-lg-3 col-md-4 col-sm-6 col-12" *ngFor="let product of products">
+                        <img src="{{product.image}}" alt="" height="250px" width="150px">
+                        <div class="right2">
+                            <p>{{product.rating.rate}}</p>
+                            <p>{{product.rating.count}}</p>
+                        </div>
+                        <p style="font-size: 12px;">{{product.title}}</p>
+                        <p>{{product.price}}</p>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>

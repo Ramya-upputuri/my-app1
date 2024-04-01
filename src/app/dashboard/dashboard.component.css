@@ -1,0 +1,24 @@
+.parent{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    margin: 0;
+}
+.left{
+    width: 20%;
+    height: 100%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.right{
+    width: 80%;
+    height: 100%;
+    background-color:white;
+    overflow: auto;
+}
+h5:focus{
+    background-color: rgb(77, 165, 42);
+}
+

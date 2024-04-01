@@ -1,0 +1,22 @@
+
+<div style="margin-top: 5%; margin-left: 40%;">
+<h1>Cars</h1>
+ <div *ngFor="let car of cars">
+    <label for="">{{car.name}}</label>
+    <input type="radio" name="selectedcar" value="{{car.path}}" [(ngModel)]="selectimagepath">
+ </div>
+<!-- <label for="">Honda</label>
+<input type="radio" name="selectedcar" value="{{cars[0].path}}" [(ngModel)]="selectimagepath">
+<label for="">BMW</label>
+<input type="radio" name="selectedcar" value="{{cars[1].path}}" [(ngModel)]="selectimagepath">
+<label for="">Audi</label>
+<input type="radio" name="selectedcar" value="{{cars[2].path}}" [(ngModel)]="selectimagepath"><br><br> -->
+
+<!-- <h1>{{selectimagepath}}</h1> -->
+
+<div *ngFor="let car of cars" style="margin-top: 20px;">
+    <img  src="{{car.path}}" alt="" *ngIf="selectimagepath==car.path" height="200px" width="200px">
+</div>
+</div>
+
+

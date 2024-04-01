@@ -1,0 +1,7 @@
+.parent{
+    display: flex;
+    margin-left: 10px;
+}
+.parent p{
+    padding-right: 10px;
+}
